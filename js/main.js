@@ -5,7 +5,7 @@ function getanswer(g) {
         var rawstring = JSON.stringify(rawdata);
         data = JSON.parse(rawstring);
         console.log(data);
-        console.log("resultados:" + data.totalResults);
+        //console.log("resultados:" + data.totalResults);
         var resultados = data.totalResults;
         var title = data.Search[0].Title;
         var year = data.Search[0].Year;
@@ -15,13 +15,13 @@ function getanswer(g) {
         var imdburl = "https://www.imdb.com/title/" + data.Search[0].imdbID + "/";
         var posterurl = data.Search[0].Poster;
         document.getElementById("resposta").innerHTML =
-            "<h3> Resultados: " + resultados + "</h3>"+
+          //  "<h3> Resultados: " + resultados + "</h3>"+
             "<h1>" + title + "</h1>"+
-            "<p>Year Realised: " + year + "</p><br>"+
-            "<p> Minutos: " + runtime + "</p><br>"+
-            "<p> Gênero: " + genre + "</p><br>" + 
-            "<p> Site: " + website + "</p><br>"+
-            "<br><img src=" + posterurl + "/><br>" + 
+            "<p>Year Realised: " + year + "</p>"+
+            "<p> Minutos: " + runtime + "</p>"+
+            "<p> Gênero: " + genre + "</p>" + 
+            "<p> Site: " + website + "</p>"+
+            "<br><img src=" + posterurl + "/>" + 
             "<p>IMDB page: <a href=" + imdburl + " target=_'blank'>" + imdburl + "</a></p>";
     })
 }
