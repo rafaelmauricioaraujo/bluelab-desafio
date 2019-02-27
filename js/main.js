@@ -1,5 +1,7 @@
 
 var data;
+var campo = $('.campo');
+console.log(campo);
 
 function buscaFilme(consulta) {
 
@@ -16,20 +18,13 @@ function buscaFilme(consulta) {
         var posterurl = data.Poster;
 
         document.getElementById("resposta").innerHTML =
-            "<h1>" + title + "</h1>" +
-            "<p> Tipo: " + type + "</p>" +
-            "<p>Year Realised: " + year + "</p>" +
-            "<p> Minutos: " + runtime + "</p>" +
-            "<p> Gênero: " + genre + "</p>" +
-            "<p> Site: " + website + "</p>" +
             "<br><img src=" + posterurl + "/>" +
+            "<h2>" + title + "</h2>" +
+            "<p>Tipo: " + type + "</p>" +
+            "<p>Year Realised: " + year + "</p>" +
+            "<p>Minutos: " + runtime + "</p>" +
+            "<p>Gênero: " + genre + "</p>" +
+            "<p>Site: <a href=" + website + " target=_'blank'>" + website + "</a></p>" +
             "<p>IMDB page: <a href=" + imdburl + " target=_'blank'>" + imdburl + "</a></p>";
     })
-}
-
-function getList(consulta){
-    $.get("http://www.omdbapi.com/?s=" + consulta + "&apikey=e4e957f", function(data){
-        var dataString = JSON.stringify(data);
-        console.log(data);
-    }); 
 }
