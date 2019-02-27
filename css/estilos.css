@@ -8,8 +8,11 @@ body{
 h1{
     margin-top: 5rem;
 }
-/*
-#resultado{
+
+.hidden{
     visibility: hidden;
 }
-*/
+
+.shown {
+    visibility: visible;
+}
