@@ -9,19 +9,46 @@
     <!--<link rel="stylesheet" href="css/estilos.css">-->
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-        </nav>
-        <div class="container">
-            <input type="text" name="pesquisa" placeholder="Digite o nome do filme"
-                onkeyup="getanswer(document.getElementById('selectBox').value)" id="selectBox">
-        </div>
-        <div class="container" id="resposta">
+<body class="container">
+    <h1 class="text-center">Vai Vai Acha</h1>
+    <h4 class="text-center">Tudo sobre aquele filme</h4>
+    <form class="form">
 
+        <div class="form-group">
+            <label for="data">Digite o nome do filme</label>
+            <input id="selectBox" class="form-control" required autofocus name="pesquisa" placeholder="Filme"
+                onkeyup="getanswer(document.getElementById('selectBox').value)" />
         </div>
-    </header>
+    </form>
+    
+    <div class="container center" id="resposta"> 
+        <p>Resultado...</p>
+    </div>
+
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>ANO</th>
+                <th>TEMPO</th>
+                <th>GENERO</th>
+                <th>SITE</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+
+    <!--<div class="container">-->
+    <!--<input type="text" name="pesquisa" placeholder="Digite o nome do filme"-->
+    <!--   onkeyup="getanswer(document.getElementById('selectBox').value)" id="selectBox">-->
+    <!--</div>-->
+
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
