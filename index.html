@@ -3,25 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>vai, vai acha esse</title>
+    <title>Busca filmes</title>
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="css/estilos.css">-->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body class="container">
-    <h1 class="text-center">Vai Vai Acha</h1>
+    <h1 class="text-center">Busca Filmes</h1>
     <h4 class="text-center">Tudo sobre aquele filme</h4>
     <form class="form">
 
         <div class="form-group">
             <label for="data">Digite o nome do filme</label>
-            <input id="selectBox" class="form-control" required autofocus name="pesquisa" placeholder="Filme"
-                onkeyup="getanswer(document.getElementById('selectBox').value)" />
+            <input id="campo" class="form-control" required autofocus name="pesquisa" placeholder="Filme"
+                onkeyup="buscaFilme(document.getElementById('campo').value)" />
         </div>
     </form>
-    
-    <div class="container center" id="resposta"> 
+
+    <div class="container center" id="resposta">
         <p>Resultado...</p>
     </div>
 
@@ -53,7 +53,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 
 </html>
