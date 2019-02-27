@@ -17,7 +17,7 @@ function buscaFilme(consulta) {
         var imdburl = "https://www.imdb.com/title/" + data.imdbID + "/";
         var posterurl = data.Poster;
 
-        document.getElementById("resposta").innerHTML =
+        document.getElementById("resultado").innerHTML =
             "<br><img src=" + posterurl + "/>" +
             "<h2>" + title + "</h2>" +
             "<p>Tipo: " + type + "</p>" +
