@@ -1,16 +1,23 @@
 body{
     background-image: url(../img/background.jpg);
+    font-family: 'Roboto', sans-serif;
     
 }
 .form-control{
     background-color: #ffe100;
     border-color: black;
 }
-/*
+
 h1{
-    margin-top: 5rem;
+    font-style: inherit;
+    padding: 15px;
 }
-*/
+
+h4{
+    color: gray;
+    padding: 15px;
+}
+
 
 .hidden{
     visibility: hidden;
@@ -21,8 +28,11 @@ h1{
 }
 #pesquisa{
     background-color: #ffe100;
-    width: 600px;
-    /*border: 25px solid yellow;*/
-    padding: 150px;
+    width: 800px;
+    padding: 60px;
     margin: 150px;
+
+}
+#campo{
+    padding: 20px;
 }

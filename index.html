@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body class="container">
@@ -15,8 +16,10 @@
         <h4 class="text-center">Tudo sobre aquele filme</h4>
         <form class="form">
             <div class="form-group">
-                <label for="data">Digite o nome do filme</label>
-                <input id="campo" class="form-control" required autofocus name="pesquisa" placeholder="Filme" onkeyup="lerCampo()">
+                <!--<label for="data">Digite o nome do filme</label>-->
+                <input id="campo" class="form-control" name="pesquisa" placeholder="Nome do filme"
+                    onkeyup="lerCampo()">
+                <!--required autofocus-->
             </div>
         </form>
         <div class="text-center">
