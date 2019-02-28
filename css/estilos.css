@@ -3,12 +3,14 @@ body{
     
 }
 .form-control{
-    background-color: lightgray;
+    background-color: #ffe100;
     border-color: black;
 }
+/*
 h1{
     margin-top: 5rem;
 }
+*/
 
 .hidden{
     visibility: hidden;
@@ -16,4 +18,11 @@ h1{
 
 .shown {
     visibility: visible;
+}
+#pesquisa{
+    background-color: #ffe100;
+    width: 600px;
+    /*border: 25px solid yellow;*/
+    padding: 150px;
+    margin: 150px;
 }

@@ -20,7 +20,7 @@ function buscaFilme(consulta) {
             let runtime = ((data.Runtime == "N/A") ? "Infelizmente não temos essa informação :( ": data.Runtime);
             let genre = ((data.Genre == "N/A") ? "Infelizmente não temos essa informação :(" : data.Genre);
             let website = ((data.Website == "N/A")? "Infelizmente não temos essa informação :(" : data.Website)
-            var posterurl = ((data.Poster == "N/A")? "Infelizmente não temos essa informação :(" : data.Poster);
+            let posterurl = ((data.Poster == "N/A")? "Infelizmente não temos essa informação :(" : data.Poster);
 
             $("#resultado").html("<h2>" + title + "</h2>" +
             "<p> Ano de Lançamento: " + year + "</p>" +
