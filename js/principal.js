@@ -1,7 +1,13 @@
 
 function lerCampo() {
+    /**
+     * função responsável por verificar se foi digitado alguma coisa 
+     * no campo de busca, caso sim, é chamado a função buscaFilme, caso não
+     * o espaço de resposta permanece oculto e sem nenhuma tag html.
+     */
     if ($("#campo").val() == "") {
         $("#resultado").removeClass("shown").addClass("hidden");
+        $("#resultado").html("");
     } else {
         buscaFilme($("#campo").val());
     }

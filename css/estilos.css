@@ -1,21 +1,40 @@
+
 body{
     background-image: url(../img/background.jpg);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-weight: 300;
+    color: #000;
     
 }
 .form-control{
     background-color: #ffe100;
     border-color: black;
+    border-radius: 0%;
+    font-size: 0.9rem;
 }
 
-h1{
-    font-style: inherit;
+#texto-principal{
     padding: 15px;
 }
 
-h4{
-    color: gray;
+#frase{
+    color: black;
     padding: 15px;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-weight: 150;
+    opacity: 0.5;
+    font-size: 22px
+}
+#pesquisa{
+    background-color: #ffe100;
+    width: 800px;
+    padding: 60px;
+    margin-top: 85px;
+
+}
+#campo{
+    padding: 20px;
+    color: black;
 }
 
 .hidden{
@@ -24,14 +43,4 @@ h4{
 
 .shown {
     visibility: visible;
-}
-#pesquisa{
-    background-color: #ffe100;
-    width: 800px;
-    padding: 60px;
-    margin: 150px;
-
-}
-#campo{
-    padding: 20px;
 }
