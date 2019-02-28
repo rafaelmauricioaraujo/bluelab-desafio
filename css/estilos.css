@@ -12,6 +12,9 @@ body{
     border-radius: 0%;
     font-size: 0.9rem;
 }
+.form-control::-webkit-input-placeholder {
+    color: black;
+ }
 
 #texto-principal{
     padding: 15px;
@@ -28,7 +31,7 @@ body{
 #pesquisa{
     background-color: #ffe100;
     width: 800px;
-    padding: 60px;
+    padding: 50px;
     margin-top: 85px;
 
 }
