@@ -13,14 +13,25 @@ function lerCampo() {
     }
 }
 
-function buscaFilme(consulta) {
+function buscaFilme(filme) {
+    /**
+     * Função responsável por fazer uma requisição a API de filmes e retornar um objeto
+     * JSON para ter informações sobre os filmes mapeadas e enviadas à pagina.
+     * 
+     * entrada: nome do filme ou parte do nome
+     */
     let data;
-    $.get("http://www.omdbapi.com/?t=" + consulta + "&apikey=e4e957f", function (rawdata) {
-        let rawstring = JSON.stringify(rawdata);
-        data = JSON.parse(rawstring);
-        console.log(data);
+    $.get("http://www.omdbapi.com/?t=" + filme + "&apikey=e4e957f", function (apidata) {
+        let apistring = JSON.stringify(apidata);
+        data = JSON.parse(apistring);
+        /**
+         * a variável abaixo 'resposta' tem como objeitvo fazer a verificação de existe filme
+         * com o texto informado. Caso sim, inicia a leitura das informações do filme,
+         * caso não, é respondido com um texto de filme não encontrado
+         */
         let resposta = data.Response;
         if (resposta == "True") {
+
             let title = ((data.Title == "N/A") ? "Infelizmente não temos essa informação :( ": data.Title);
             let year = ((data.Year == "N/A") ? "Infelizmente não temos essa informação :( " : data.Year);
             let runtime = ((data.Runtime == "N/A") ? "Infelizmente não temos essa informação :( ": data.Runtime);
