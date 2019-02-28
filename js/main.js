@@ -22,28 +22,17 @@ function buscaFilme(consulta) {
             let website = ((data.Website == "N/A")? "Infelizmente não temos essa informação :(" : data.Website)
             var posterurl = ((data.Poster == "N/A")? "Infelizmente não temos essa informação :(" : data.Poster);
 
-            document.getElementById("resultado").innerHTML =
-                "<div class=row>" + 
-                "<div class=col-6>"+
-                "<br><img src=" + posterurl + "/>" +
-                "</div>" + 
-                "<div class=col-6>" + 
-                "<h2>" + title + "</h2>" +
-                "<p>Ano de Lançamento " + year + "</p>" +
-                "<p>Minutos: " + runtime + "</p>" +
-                "<p>Gênero: " + genre + "</p>" +
-                "<p>Site: <a href=" + website + " target=_'blank'>" + website + "</a></p>" + 
-                "</div>" + 
-                "</div>"
+            $("#resultado").html("<h2>" + title + "</h2>" +
+            "<p> Ano de Lançamento: " + year + "</p>" +
+            "<p> Minutos: " + runtime + "</p>" + 
+            "<p> Gênero: " + genre + "</p>" + 
+            "<p> Site: <a href=" + website + " target='_blank'>" + website + "</a></p>");
             
             $("#resultado").removeClass("hidden").addClass("shown");
 
         } else if(resposta == "False"){
-            document.getElementById("resultado").innerHTML = "<h2> Não encontramos nada com esse nome... :( </h2>"
+            $("#resultado").html("<h2> Não encontramos filme com esse nome... :( </h2>");
         }
     })
 }
 
-function montaResposta(id, dados){
-    $(id).append("<br><img src=" + dados.Poster + ">");
-}
