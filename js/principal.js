@@ -1,5 +1,6 @@
 
 function lerCampo() {
+    //console.log('acionado')
     /**
      * função responsável por verificar se foi digitado alguma coisa 
      * no campo de busca, caso sim, é chamado a função buscaFilme, caso não
@@ -14,6 +15,7 @@ function lerCampo() {
 }
 
 function buscaFilme(filme) {
+    console.log('acionado também');
     /**
      * Função responsável por fazer uma requisição a API de filmes e retornar um objeto
      * JSON para ter informações sobre os filmes mapeadas e enviadas à pagina.
@@ -39,11 +41,14 @@ function buscaFilme(filme) {
             let website = ((data.Website == "N/A")? "Infelizmente não temos essa informação :(" : data.Website)
             let posterurl = ((data.Poster == "N/A")? "Infelizmente não temos essa informação :(" : data.Poster);
 
-            $("#resultado").html("<h2>" + title + "</h2>" +
+            $("#resultado").html
+            ("<h2>" + title + "</h2>" +
+            "<img src="+posterurl + "/>"+
             "<p> Ano de Lançamento: " + year + "</p>" +
             "<p> Minutos: " + runtime + "</p>" + 
             "<p> Gênero: " + genre + "</p>" + 
-            "<p> Site: <a href=" + website + " target='_blank'>" + website + "</a></p>");
+            "<p> Site: <a href=" + website + " target='_blank'>" + website + "</a></p>"
+            );
             
             $("#resultado").removeClass("hidden").addClass("shown");
 
