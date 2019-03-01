@@ -39,7 +39,7 @@ function buscaFilme(filme) {
             let runtime = ((data.Runtime == "N/A") ? "Infelizmente não temos essa informação :( " : data.Runtime);
             let genre = ((data.Genre == "N/A") ? "Infelizmente não temos essa informação :(" : data.Genre);
             let website = ((data.Website == "N/A") ? "Infelizmente não temos essa informação :(" : data.Website)
-            let posterurl = ((data.Poster == "N/A") ? "":data.Poster);
+            let posterurl = ((data.Poster == "N/A") ? "Infelizmente não temos essa informação :(" :data.Poster);
 
             /**
              *  O código abaixo captura o campo de resultado e preenche com os campos mapeados do JSON
