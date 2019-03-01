@@ -26,6 +26,7 @@ function buscaFilme(filme) {
     $.get("http://www.omdbapi.com/?t=" + filme + "&apikey=e4e957f", function (apidata) {
         let apistring = JSON.stringify(apidata);
         data = JSON.parse(apistring);
+        console.log(data);
         /**
          * a variável abaixo 'resposta' tem como objeitvo fazer a verificação de existe filme
          * com o texto informado. Caso sim, inicia a leitura das informações do filme,
@@ -38,8 +39,11 @@ function buscaFilme(filme) {
             let year = ((data.Year == "N/A") ? "Infelizmente não temos essa informação :( " : data.Year);
             let runtime = ((data.Runtime == "N/A") ? "Infelizmente não temos essa informação :( " : data.Runtime);
             let genre = ((data.Genre == "N/A") ? "Infelizmente não temos essa informação :(" : data.Genre);
-            let website = ((data.Website == "N/A") ? "Infelizmente não temos essa informação :(" : data.Website)
-            let posterurl = ((data.Poster == "N/A") ? "Infelizmente não temos essa informação :(" :data.Poster);
+            let website = ((data.Website == "N/A" || data.Website == null) ? "Infelizmente não temos essa informação :(" : data.Website)
+            /**
+             * tratamento especial dado ao poster por se tratar de um arquivo de imagem e não apenas texto
+             */
+            let posterurl = ((data.Poster == "N/A") ? "<p> Infelizmente não temos o poster :(</p>" :"<img src=" + data.Poster + "/>");
 
             /**
              *  O código abaixo captura o campo de resultado e preenche com os campos mapeados do JSON
@@ -47,7 +51,8 @@ function buscaFilme(filme) {
              */
             $("#resultado").html
                 ("<h2>" + title + "</h2>" +
-                    "<img src=" + posterurl + "/>" +
+                posterurl +
+                  // "<img src=" + posterurl + "/>" +
                     "<p> Ano de Lançamento: " + year + "</p>" +
                     "<p> Minutos: " + runtime + "</p>" +
                     "<p> Gênero: " + genre + "</p>" +
