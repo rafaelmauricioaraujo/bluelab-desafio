@@ -6,6 +6,7 @@ body{
     color: #000;
     
 }
+/*
 .form-control{
     background-color: #ffe100;
     border-color: black;
@@ -14,7 +15,8 @@ body{
 }
 .form-control::-webkit-input-placeholder {
     color: black;
- }
+}
+*/
 
 #texto-principal{
     padding: 15px;
@@ -38,7 +40,17 @@ body{
 #campo{
     padding: 20px;
     color: black;
+    background-color: #ffe100;
+    border-color: black;
+    border-radius: 0%;
+    font-size: 0.9rem;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    border: 1px solid black;
 }
+#campo::-webkit-input-placeholder {
+    color: black;
+ }
 img{
     width: 50%;
     padding: 20px;
